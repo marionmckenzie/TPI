@@ -4,7 +4,15 @@ ArcGIS toolbox and ArcPy code to run topographic postion index (TPI) analysis ac
 The ArcPy code that runs behind the script (TPI_code.py) is also available in this repository.
 
 ## Running the TPI toolbox in ArcGIS
-To run the tool, the “neighborhood”, “TPI Standardization”, and “standardized output” and “unstandardized output” options need to be replaced within the model builder setup by dragging the “TPI Standardization” tool into the model builder “edit” screen. Make sure that when setting up the neighborhood parameter, you have selected “annulus” and your pixel size of interest. These inputs should be streamlined into the rest of the model builder as is. If you have problems or questions, please contact marion.mckenzie@mines.edu.
+Please follow the below step-by-step instructions to make the TPI tool operable in new ArcGIS projects. 
+1. After downloading the toolbox and the TPI_code.py file, add the toolbox to an ArcGIS project.
+2. Within the toolbox, you should see both the script tool "TPI Standardization" and model builder "TPI_SemiAutomatedID".
+3. Right click on the script tool and select "Properties".
+4. Then, under the "Execution" tab, navigate to the "TPI_code.py" file and select. This now connects the ArcPy code to the script tool that will allow it to run.
+5. Back in the toolbox, right click on the "TPI_SemiAutomatedID" model builer and select "Edit".
+6. Within the model build, you will need to replace the existing “neighborhood”, “TPI Standardization”, and “standardized output” options with your newly configured script tool by dragging the “TPI Standardization” tool onto the model builder screen. Make sure that when setting up the neighborhood parameter, you have selected “annulus” and your pixel size of interest.
+
+Once completing these steps, these inputs can be streamlined into the rest of the model builder as is. If you have problems or questions, please contact marion.mckenzie@mines.edu. A video for making the TPI tool operable within new ArcGIS projects will be available through a Jupyter Book by the end of 2024. The current TPI_code.py configuration only saves the standardized raster from TPI analysis. The standardized raster dataset is input into the rest of the "TPI_SemiAutomatedID" model builder. Lines of code are available within TPI_coe.py to save the unstandardized TPI raster as well and just need to be commented in. 
 
 ## Post-feature identification processing
 To utilize this TPI tool to identify streamlined subglacial bedforms across deglaciated landscapes, please see [https://github.com/elliesch/bedfinder](https://github.com/elliesch/bedfinder) and [Abrahams and McKenzie et al., 2024](https://ui.adsabs.harvard.edu/abs/2024EaArX...X51403A/abstract). 
