@@ -9,10 +9,10 @@ dem = arcpy.GetParameterAsText(0)
 neighborhood = arcpy.GetParameterAsText(1)
 
 #TPI output raster dataset
-tpi_output = arcpy.GetParameterAsText(2)
+#tpi_output = arcpy.GetParameterAsText(2)
 
 #Standardized TPI output raster dataset
-tpi_std_output = arcpy.GetParameterAsText(3)
+tpi_std_output = arcpy.GetParameterAsText(2)
 
 arcpy.CheckOutExtension("Spatial")
 
@@ -21,7 +21,7 @@ arcpy.CheckOutExtension("Spatial")
 tpiCalculate = Int((dem - FocalStatistics(dem, neighborhood, "MEAN", "DATA")) + 0.5)
 
 #Save TPI output
-tpiCalculate.save(tpi_output)
+#tpiCalculate.save(tpi_output)
 
 #Retrieve mean value
 tpiCalculateMeanResult = arcpy.GetRasterProperties_management(tpiCalculate, "MEAN")
@@ -34,7 +34,7 @@ tpiMean = (tpiCalculateMeanResult.getOutput(0))
 tpiSTD = (tpiCalculateSTDResult.getOutput(0))
 
 #Use raster calculator to calculate standardization
-tpi_std = Int((arcpy.Raster(tpi_output) - float(tpiMean))/ float(tpiSTD))
+tpi_std = Int((arcpy.Raster(tpiCalculate) - float(tpiMean))/ float(tpiSTD))
 
 #Save TPI mean and stdev values
 tpi_std.save(tpi_std_output)
