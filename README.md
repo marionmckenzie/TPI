@@ -18,16 +18,16 @@ Once completing these steps, these inputs can be streamlined into the rest of th
 To utilize this TPI tool to identify streamlined subglacial bedforms across deglaciated landscapes, please see [https://github.com/elliesch/bedfinder](https://github.com/elliesch/bedfinder) and [Abrahams and McKenzie et al., 2024](https://ui.adsabs.harvard.edu/abs/2024EaArX...X51403A/abstract). 
 
 ## References & Attribution
-If using this specific model builder and script tool, please reference 
-[![DOI](https://zenodo.org/badge/768265366.svg)](https://zenodo.org/doi/10.5281/zenodo.11660146)
+If you make use of the TPI tool, please cite:
+[![DOI]([https://zenodo.org/badge/DOI/10.5281/zenodo.13685546.svg](https://zenodo.org/records/13685546)
 ```
-@misc{wiscbaylobe_dataset,
-  author       = {Ellianna {Abrahams} and Marion A {McKenzie},
-  title        = {bedfinder: A Python package for the Automatic Detection of Glacially-Derived Bedforms},
+@misc{TPI_dataset,
+  author       = {Marion A {McKenzie},
+  title        = {Topographic Position Index (TPI) enabled for ArcGIS},
   year         = {2024},
-  doi          = {10.5281/zenodo.11660146},
-  url          = {https://zenodo.org/doi/10.5281/zenodo.11660146},
-  note         = {Pre-release}
+  doi          = {10.5281/zenodo.13685546},
+  url          = {[https://zenodo.org/records/13685546](https://zenodo.org/records/13685546)},
+  note         = {v1.0.0}
 }
 ```
 
